@@ -35,7 +35,7 @@ public class Driver extends BaseModel {
 
     @DecimalMin(value = "0.0")
     @DecimalMax(value = "5.0")
-    private double rating;
+    private Double rating;
 
 
     @Fetch(FetchMode.SUBSELECT)

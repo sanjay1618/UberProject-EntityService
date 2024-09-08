@@ -1,4 +1,4 @@
-CREATE TABLE booking
+CREATE TABLE IF NOT EXISTS booking
 (
     id             INT AUTO_INCREMENT NOT NULL,
     created_at     datetime           NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE booking
     CONSTRAINT pk_booking PRIMARY KEY (id)
 );
 
-CREATE TABLE driver
+CREATE TABLE IF NOT EXISTS driver
 (
     id             INT AUTO_INCREMENT NOT NULL,
     created_at     datetime           NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE driver
     CONSTRAINT pk_driver PRIMARY KEY (id)
 );
 
-CREATE TABLE passenger
+CREATE TABLE if not exists passenger
 (
     id           INT AUTO_INCREMENT NOT NULL,
     created_at   datetime           NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE passenger
     CONSTRAINT pk_passenger PRIMARY KEY (id)
 );
 
-CREATE TABLE passenger_review
+CREATE TABLE IF NOT EXISTS passenger_review
 (
     id               INT          NOT NULL,
     passenger_rating BIGINT       NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE passenger_review
     CONSTRAINT pk_passenger_review PRIMARY KEY (id)
 );
 
-CREATE TABLE review
+CREATE TABLE IF NOT EXISTS review
 (
     id         INT AUTO_INCREMENT NOT NULL,
     created_at datetime           NOT NULL,
